@@ -8,20 +8,13 @@ const LandingPage = ({ currentUser }) => {
   return <h1>You are signed in</h1>;
 };
 
-LandingPage.getInitialProps = async (context)=>{
- 
-  try {
-    const client = buildClient(context);
-    const { data } = await client.get('/api/users/currentuser');
+LandingPage.getInitialProps = async context=>{
+ console.log('Landing page')
+  const client = buildClient(context);
 
-    return data;
-  } catch (error) {
-    if (error.response.status === 401) {
-      return { data: null };
-    } else {
-      throw error;
-    }
-  }
+  const {data} = await client.get('/api/users/currentuser');
+  console.log(data)
+  return data; 
 };
   
 
