@@ -2,13 +2,25 @@ import Link from 'next/link';
 
 export default ({currentUser}) => {
 
+    const links = [
+        !currentUser && {label: 'Sign Up', href: '/auth/signup'},
+        !currentUser && {label: 'Sign In', href: '/auth/signin'},
+        currentUser && {label: 'Sign Out', href: '/auth/signout'}
+    ].filter(linkConfig => linkConfig)
+    .map(({label, href})=>{
+       return <li key={href} className="nav-item">
+            <Link className="nav-link"href={href}>{label}</Link>
+             
+        </li>
+    })
+
     return (<nav className="navbar navbar-light bg-light p-3">
         <Link href="/" passHref>
             Tickets
         </Link>
         <div className='d-flex justify-content-end'>
-            <ul className='nav d-flex align-items-center'>
-                {currentUser? 'Sign out' : 'Sign in/up'}
+            <ul className='nav d-flex align-items-center text-bg-light'>
+                {links}
             </ul>
         </div>
     </nav>)
