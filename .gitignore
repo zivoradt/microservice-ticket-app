@@ -2,3 +2,5 @@
 ./client/node_modules/
 ./common/build
 ./common/node_modules
+/common/build
+/common/node_modules
