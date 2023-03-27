@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import cookieSession from "cookie-session";
 
 import { authRouter } from "./routes";
-import { errorHandler } from "./middelwares/error-handler";
+import { errorHandler } from "@zivoradt/common";
 import { signinRouter } from "./routes/signin";
 
 // Initiate app
@@ -24,7 +24,6 @@ app.use(cookieSession({
 }))
 
 // Route handler
-app.use(signinRouter);
 app.use(authRouter);
 
 // Error handler

@@ -1,7 +1,7 @@
 import express, {Request, Response} from "express";
 import { body, validationResult } from "express-validator";
-import { BadRequestError } from "../errors/bad-request-error";
-import { validateRequest } from "../middelwares/validate-request";
+import { BadRequestError } from "@zivoradt/common";
+import { validateRequest } from "@zivoradt/common";
 import  jwt  from "jsonwebtoken";
 
 import { User } from "../models/user";

@@ -1,6 +1,6 @@
 import express from "express";
-import { requireAuth } from "../middelwares/require-auth";
-import { currentUser } from "../middelwares/current-user";
+import { requireAuth } from "@zivoradt/common"
+import { currentUser } from "@zivoradt/common"  ;
 const router = express.Router();
 
 router.get('/currentuser', currentUser, requireAuth, (req, res)=>{

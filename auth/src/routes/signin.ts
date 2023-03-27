@@ -1,8 +1,8 @@
 import express, {Request, Response} from "express";
 const router = express.Router();
 import {body} from 'express-validator'
-import { BadRequestError } from "../errors/bad-request-error";
-import { validateRequest } from "../middelwares/validate-request";
+import { BadRequestError } from "@zivoradt/common";
+import { validateRequest } from "@zivoradt/common";
 import { User } from "../models/user";
 import { Password } from "../services/password";
 import jwt from 'jsonwebtoken';
