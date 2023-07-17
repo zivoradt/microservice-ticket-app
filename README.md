@@ -4,10 +4,10 @@ This repository contains the source code for a microservice-based ticket applica
 # Prerequisites
 Before deploying the application, make sure you have the following dependencies installed:
 
-• Docker
-• Kubernetes
-• Skaffold
-• Deployment
+• Docker<br>
+• Kubernetes<br>
+• Skaffold<br>
+• Deployment<br>
 
 To deploy the microservice ticket application, follow these steps:
 
@@ -21,8 +21,8 @@ Update the Skaffold configuration:
 Open the skaffold.yaml file and verify/update the following settings:
 
 • image: Set the desired Docker image name for each service.<br>
-• context: Update the context path for each service to the corresponding service folder.
-• dockerfile: Verify that the Dockerfile name is correct for each service.
+• context: Update the context path for each service to the corresponding service folder.<br>
+• dockerfile: Verify that the Dockerfile name is correct for each service.<br>
 
 # Deploy the application:
 
