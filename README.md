@@ -11,7 +11,7 @@ Before deploying the application, make sure you have the following dependencies 
 
 To deploy the microservice ticket application, follow these steps:
 
-#Clone the repository:
+# Clone the repository:
 
 git clone https://github.com/zivoradt/microservice-ticket-app.git
 cd microservice-ticket-app
@@ -20,7 +20,7 @@ Update the Skaffold configuration:
 
 Open the skaffold.yaml file and verify/update the following settings:
 
-• image: Set the desired Docker image name for each service.
+• image: Set the desired Docker image name for each service.<br>
 • context: Update the context path for each service to the corresponding service folder.
 • dockerfile: Verify that the Dockerfile name is correct for each service.
 
